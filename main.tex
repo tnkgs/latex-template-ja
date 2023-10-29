@@ -1,19 +1,90 @@
 \documentclass{classes/report}
 
+\usepackage{enumitem}
+\pagestyle{empty}
+
 \begin{document}
 
-\subfile{sections/title}
-\newpage
+基礎電子工学 \ 第3回 \ 課題
 
-\tableofcontents
-\clearpage
+\begin{flushright}
+    \underline{\ 学籍番号 \ 2397002 \ 氏名 \ 杉本 謙仁 \ }
+\end{flushright}
 
-\subfile{sections/abstract}
-\newpage
+\bigskip
 
-\subfile{sections/main_issue}
-\newpage
+\begin{enumerate}
+    \item ゾンマーフェルトのモデルにおいて，金属棒の長さを 3 [nm]として，n = 1 \sim \ 4 までのエネルギーを求めよ．
+\end{enumerate}
 
-\subfile{sections/references}
+ゾンマーフェルトのモデルにおけるエネルギーは次の式で表される．
+\begin{equation}
+    E_n = \frac{n^2\hbar^2}{8mL^2}
+\end{equation}
+
+ここで，$m$は電子の質量，$\hbar$はプランク定数，$L$は金属棒の長さである．
+
+$n=1$の場合，エネルギーは次のように求められる．
+
+\begin{equation}
+    E_1 = \frac{(6.6 \times 10^{-34})^2}{8 \times 9.11 \times 10^{-31} \times (3 \times 10^{-9} )^2} = 6.6 \times 10^{-21} [J]
+\end{equation}
+
+$n=2$の場合，エネルギーは次のように求められる．
+
+\begin{equation}
+    E_2 = \frac{4 \times (6.6 \times 10^{-34})^2}{8 \times 9.11 \times 10^{-31} \times (3 \times 10^{-9} )^2} = 2.7 \times 10^{-20} [J]
+\end{equation}
+
+$n=3$の場合，エネルギーは次のように求められる．
+
+\begin{equation}
+    E_3 = \frac{9 \times (6.6 \times 10^{-34})^2}{8 \times 9.11 \times 10^{-31} \times (3 \times 10^{-9} )^2} = 6.0 \times 10^{-20} [J]
+\end{equation}
+
+$n=4$の場合，エネルギーは次のように求められる．
+
+\begin{equation}
+    E_4 = \frac{16 \times (6.6 \times 10^{-34})^2}{8 \times 9.11 \times 10^{-31} \times (3 \times 10^{-9} )^2} = 1.1 \times 10^{-19} [J]
+\end{equation}
+
+\bigskip
+
+\begin{enumerate}[resume]
+    \item 金属棒の長さを 10 [mm]としたとき，n = 1 と n = 2 との間のエネルギー差を求めよ．
+\end{enumerate}
+
+$n=1$の場合のエネルギーは次のように求められる．
+
+\begin{equation}
+    E_1 = \frac{(6.6 \times 10^{-34})^2}{8 \times 9.11 \times 10^{-31} \times (10 \times 10^{-3} )^2} = 6.0 \times 10^{-34} [J]
+\end{equation}
+
+$n=2$の場合のエネルギーは次のように求められる．
+
+\begin{equation}
+    E_2 = \frac{4 \times (6.6 \times 10^{-34})^2}{8 \times 9.11 \times 10^{-31} \times (10 \times 10^{-3} )^2} = 2.4 \times 10^{-33} [J]
+\end{equation}
+
+よって，n = 1 と n = 2 との間のエネルギー差は次のように求められる．
+
+\begin{equation}
+    E_2 - E_1 = 1.8 \times 10^{-33} [J]
+\end{equation}
+
+
+% \subfile{sections/title}
+% \newpage
+
+% \tableofcontents
+% \clearpage
+
+% \subfile{sections/abstract}
+% \newpage
+
+% \subfile{sections/main_issue}
+% \newpage
+
+% \subfile{sections/references}
 
 \end{document}
