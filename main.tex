@@ -5,7 +5,7 @@
 
 \begin{document}
 % textlint-disable ja-technical-writing/ja-no-mixed-period
-基礎電子工学 \ 第4回 \ 課題
+基礎電子工学 \ 第5回 \ 課題
 % textlint-enable ja-technical-writing/ja-no-mixed-period
 \begin{flushright}
     \underline{\ 学籍番号 \ 2397002 \ 氏名 \ 杉本 謙仁 \ }
@@ -14,45 +14,35 @@
 \bigskip
 
 \begin{enumerate}
-    \item シリコンに添加されたドナー不純物は,
-          室温付近では自由電子を放出して正に帯電し，放出した自由電子は，
-          正に帯電したドナーとの間のクーロン力によって束縛されてドナーのまわりを回っている．
-          電子軌道を円軌道，シリコンの比誘電率を 12 として，その軌道半径を求めよ．
+    \item フェルミ準位の値と温度を適当に決めて，フェルミーディラックの分布関数を描け．
 \end{enumerate}
 
-ドナー不純物によって放出された自由電子は，ドナー不純物の正に帯電したイオンとクーロン力によって束縛され，
-ドナー不純物の周りを円軌道で回っている．
-このとき，ボーアのモデルにより，電子の運動エネルギーとクーロン力の大きさが等しくなる．
-軌道半径の式は以下の通りである．
+フェルミ準位を $E_F = 1 [\mathrm{eV}]$，温度を $T = 300 [\mathrm{K}]$ とする．
 
-\begin{equation}
-    r = \frac{\epsilon \hbar^2}{\pi mq^2}n^2
-\end{equation}
-
-ここで，$m$は自由電子の質量，$r$は軌道半径$\hbar$はプランク定数，$\epsilon$はシリコンの誘電率，$q$は電子の電荷量を表す．
-また，シリコンの比誘電率は12のため，$\epsilon = 12\epsilon_0$となる．$\epsilon_0$は真空の誘電率である．
-そして，$n$は軌道の番号であり，$n=1$を利用する．
-これらを代入すると以下の通りある．
-
-\begin{equation}
-    r = \frac{12\times 8.854 \times 10^{-12} \times \left(6.6\times 10^{-34} \right)^2}{3.14 \times 9.11 \times 10^{-31} \times \left(1.6\times 10^{-19} \right)^2} \approx 6.3\times 10^{-10} [\mathrm{m}]
-\end{equation}
+% ./figures/fermi-dirac.jpgを挿入
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{./figures/fermi-dirac.jpg}
+    \caption{フェルミーディラックの分布関数}
+\end{figure}
 
 \bigskip
 
 \begin{enumerate}[resume]
-    \item シリコン中のドナーから電子を奪って自由電子にするのに必要なエネルギーを求めよ．
-          ただし，シリコンの比誘電率は 12 とする.
+    \item 室温でのn型半導体の電子密度が$5\times 10^{21} [m^{-3}]$であった．正孔密度を求めよ．ただし，真性キャリア
+    密度は $1\times 10^{16} [m^{-3}]$とする．
 \end{enumerate}
 
-$n=\infty$のエネルギーと$n=1$のエネルギーの差を求めることで，ドナー不純物から電子を奪って自由電子にするのに必要なエネルギーを求めることができる．
+\( n \) 型半導体における電子の密度 \( n \) と正孔の密度 \( p \) と真性キャリア密度 \( n_i \) の関係は次のように表される．
 
-\begin{equation}
-    \begin{split}
-        E_\infty - E_1 &= - \frac{mq^4}{8\epsilon^2\hbar^2}\left(\frac{1}{\infty^2} - \frac{1}{1^2}\right) \\
-        &= \frac{9.11\times 10^{-31} \times \left(1.6 \times 10^{-19} \right)^3}{8 \times \left(12 \times 8.85 \times 10^{-12} \right)^2 \times \left(6.6 \times 10^{-34} \right)^2} \\
-        &\approx 0.094 [\mathrm{eV}]
-    \end{split}
-\end{equation}
+\[ n \cdot p = n_i^2 \]    
+
+ここで，\( n \) は\( 5 \times 10^{21} \, \text{m}^{-3} \)，\( n_i \) は \( 1 \times 10^{16} \, \text{m}^{-3} \)．
+以上より，
+
+\[ p = \frac{n_i^2}{n} = \frac{(1 \times 10^{16} \, \text{m}^{-3})^2}{5 \times 10^{21} \, \text{m}^{-3}} = \frac{1 \times 10^{32} \, \text{m}^{-6}}{5 \times 10^{21} \, \text{m}^{-3}} = 2 \times 10^{10} \, \text{m}^{-3} \]
+
+したがって，正孔の密度 \( p \) は \(2 \times 10^{10} \, \text{m}^{-3}\) ．
+
 
 \end{document}
