@@ -5,7 +5,7 @@
 
 \begin{document}
 % textlint-disable ja-technical-writing/ja-no-mixed-period
-基礎電子工学 \ 第4回 \ 課題
+基礎電子工学 \ 第9回 \ 課題
 % textlint-enable ja-technical-writing/ja-no-mixed-period
 \begin{flushright}
     \underline{\ 学籍番号 \ 2397002 \ 氏名 \ 杉本 謙仁 \ }
@@ -14,45 +14,33 @@
 \bigskip
 
 \begin{enumerate}
-    \item シリコンに添加されたドナー不純物は,
-          室温付近では自由電子を放出して正に帯電し，放出した自由電子は，
-          正に帯電したドナーとの間のクーロン力によって束縛されてドナーのまわりを回っている．
-          電子軌道を円軌道，シリコンの比誘電率を 12 として，その軌道半径を求めよ．
+    \item 光を照射して，過剰少数キャリアである電子を $6 \times 10^{17} [\mathrm{cm}^{-3}]$発生させた．電子の寿命を $20 [\mathrm{ms}]$として，$100 [\mathrm{ms}]$後の電子密度を求めよ．
 \end{enumerate}
 
-ドナー不純物によって放出された自由電子は，ドナー不純物の正に帯電したイオンとクーロン力によって束縛され，
-ドナー不純物の周りを円軌道で回っている．
-このとき，ボーアのモデルにより，電子の運動エネルギーとクーロン力の大きさが等しくなる．
-軌道半径の式は以下の通りである．
-
 \begin{equation}
-    r = \frac{\epsilon \hbar^2}{\pi mq^2}n^2
+    \Delta n(t) = 6 \times 10^{17} = G_{L} \tau_{n}
 \end{equation}
 
-ここで，$m$は自由電子の質量，$r$は軌道半径$\hbar$はプランク定数，$\epsilon$はシリコンの誘電率，$q$は電子の電荷量を表す．
-また，シリコンの比誘電率は12のため，$\epsilon = 12\epsilon_0$となる．$\epsilon_0$は真空の誘電率である．
-そして，$n$は軌道の番号であり，$n=1$を利用する．
-これらを代入すると以下の通りある．
+より，電子密度 $\Delta n(t)$ は以下の通り求められる．
 
 \begin{equation}
-    r = \frac{12\times 8.854 \times 10^{-12} \times \left(6.6\times 10^{-34} \right)^2}{3.14 \times 9.11 \times 10^{-31} \times \left(1.6\times 10^{-19} \right)^2} \approx 6.3\times 10^{-10} [\mathrm{m}]
+    \begin{split}
+        \Delta n(t) &= \Delta n_0 \exp\left(-\frac{t}{\tau}\right) \\
+        &= 6 \times 10^{17} \times \exp\left(-\frac{100 \times 10^{-6}}{20 \times 10^{-6}}\right) \\
+        &= 4.0 \times 10^{15} [\mathrm{cm}^{-3}]
+    \end{split}
 \end{equation}
 
 \bigskip
 
 \begin{enumerate}[resume]
-    \item シリコン中のドナーから電子を奪って自由電子にするのに必要なエネルギーを求めよ．
-          ただし，シリコンの比誘電率は 12 とする.
+    \item 室温($300 [\mathrm{K}]$)において n 型半導体の電子の移動度が $4,000[cm^{2}/\mathrm{Vs}]$とすると，電子の拡散係数を求めよ．
 \end{enumerate}
 
-$n=\infty$のエネルギーと$n=1$のエネルギーの差を求めることで，ドナー不純物から電子を奪って自由電子にするのに必要なエネルギーを求めることができる．
+アインシュタインの関係式より，電子の拡散係数 $D_{n}$ は以下の通り求められる．
 
 \begin{equation}
-    \begin{split}
-        E_\infty - E_1 &= - \frac{mq^4}{8\epsilon^2\hbar^2}\left(\frac{1}{\infty^2} - \frac{1}{1^2}\right) \\
-        &= \frac{9.11\times 10^{-31} \times \left(1.6 \times 10^{-19} \right)^3}{8 \times \left(12 \times 8.85 \times 10^{-12} \right)^2 \times \left(6.6 \times 10^{-34} \right)^2} \\
-        &\approx 0.094 [\mathrm{eV}]
-    \end{split}
+    D_{n} = \frac{kT}{q}\mu_{n} = \frac{1.38 \times 10^{-23} \times 300}{1.6 \times 10^{-19}}\times 4000 \times 10^{-4} = 0.01 [\mathrm{m}^{2}/\mathrm{s}]
 \end{equation}
 
 \end{document}
