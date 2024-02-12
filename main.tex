@@ -5,7 +5,7 @@
 
 \begin{document}
 % textlint-disable ja-technical-writing/ja-no-mixed-period
-基礎電子工学 \ 第9回 \ 課題
+基礎電子工学 \ 第12回 \ 出席
 % textlint-enable ja-technical-writing/ja-no-mixed-period
 \begin{flushright}
     \underline{\ 学籍番号 \ 2397002 \ 氏名 \ 杉本 謙仁 \ }
@@ -14,33 +14,20 @@
 \bigskip
 
 \begin{enumerate}
-    \item 光を照射して，過剰少数キャリアである電子を $6 \times 10^{17} [\mathrm{cm}^{-3}]$発生させた．電子の寿命を $20 [\mathrm{ms}]$として，$100 [\mathrm{ms}]$後の電子密度を求めよ．
+    \item 電子密度 $3 \times 10^{19} [\mathrm{m}^{-3}]$のn型シリコン半導体に直径$0.5[\mathrm{mm}]$のアルミニウム電極
+          によるショットキー接合をつくった.シリコンの比誘電率を12,$Vd = 0.75 [\mathrm{V}]$として,無バイアス時の接合容量を求めよ.
 \end{enumerate}
-
-\begin{equation}
-    \Delta n(t) = 6 \times 10^{17} = G_{L} \tau_{n}
-\end{equation}
-
-より，電子密度 $\Delta n(t)$ は以下の通り求められる．
 
 \begin{equation}
     \begin{split}
-        \Delta n(t) &= \Delta n_0 \exp\left(-\frac{t}{\tau}\right) \\
-        &= 6 \times 10^{17} \times \exp\left(-\frac{100 \times 10^{-6}}{20 \times 10^{-6}}\right) \\
-        &= 4.0 \times 10^{15} [\mathrm{cm}^{-3}]
+        \omega & = \sqrt{\frac{2\epsilon_0 \epsilon_s}{qN_d}} \sqrt{V_d - V}                                                             \\
+               & = \sqrt{\frac{2 \times 8.854 \times 10^{-12} \times 12}{1.602 \times 10^{-19} \times 3 \times 10^{19}}} \sqrt{0.75 - 0} \\
+               & = 5.8 \times 10^{-6} [\mathrm{m}]                                                                                       \\
+        C      & = \frac{\epsilon}{\omega} \cdot S                                                                                       \\
+               & = \frac{8.854 \times 10^{-12} \times 12}{5.8 \times 10^{-6}} \times 3.14 \times \left(0.25 \times 10^{-3} \right)^2     \\
+               & = 3.6 \times 10^{-12}                                                                                                   \\
+               & = 3.6 [\mathrm{pF}]
     \end{split}
-\end{equation}
-
-\bigskip
-
-\begin{enumerate}[resume]
-    \item 室温($300 [\mathrm{K}]$)において n 型半導体の電子の移動度が $4,000[cm^{2}/\mathrm{Vs}]$とすると，電子の拡散係数を求めよ．
-\end{enumerate}
-
-アインシュタインの関係式より，電子の拡散係数 $D_{n}$ は以下の通り求められる．
-
-\begin{equation}
-    D_{n} = \frac{kT}{q}\mu_{n} = \frac{1.38 \times 10^{-23} \times 300}{1.6 \times 10^{-19}}\times 4000 \times 10^{-4} = 0.01 [\mathrm{m}^{2}/\mathrm{s}]
 \end{equation}
 
 \end{document}
